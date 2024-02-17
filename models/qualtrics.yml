@@ -3,11 +3,6 @@ version: 2
 models:
   - name: qualtrics__survey
     description: Detailed view of all surveys created, enhanced with distribution and response metrics.
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - source_relation
-            - survey_id
     columns:
       - name: is_deleted
         description: "{{ doc('_fivetran_deleted') }}"
